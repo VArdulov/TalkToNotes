@@ -1,0 +1,7 @@
+# Some file system and application artificats
+.DS_Store
+.obsidian/
+
+*.mp3
+*.pdf
+*.vtt
