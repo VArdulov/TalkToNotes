@@ -1,7 +1,11 @@
 # Some file system and application artificats
 .DS_Store
 .obsidian/
+**/__pycache__/*
+.idea/
 
+# Data file formats
 *.mp3
 *.pdf
 *.vtt
+*.txt
