@@ -8,7 +8,6 @@ YT_DLP_START_INDEX = 8
 YT_DLP_TIMING_NEXT_INDEX_OFFSET = 8
 YT_DLP_TIMING_TEXT_OFFSET = 1
 
-
 class Transcript:
 
     def __init__(self):
@@ -60,7 +59,7 @@ class YTDLPTranscript(StringTranscript):
 
         # if we want to keep the time step
         if self.timing:
-            text = [f"<timing=\"{timing}\"\\> {text}" for text, timing in zip(text, timings)]
+            text = [f"<timing=\"{timing}\"\> {text}" for text, timing in zip(text, timings)]
 
         return "\n".join(text)
 
