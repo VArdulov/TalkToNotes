@@ -80,11 +80,19 @@ data/
 - [x] Install HuggingFace
 - [x] Download [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
 - [x] Follow the [Custom LLM Usage Guide](https://gpt-index.readthedocs.io/en/latest/module_guides/models/llms/usage_custom.html) to use each of the models above in an vector store embedding setting
-- [ ] Use the previous steps to complete the initial push for VectorIndexStore over the current collection of Documents
-	- [ ] Save it locally, look into maybe using FAISS for storage persistence as it seems to accelerate/reduce the space a little
-- [ ] Think about using figuring out how to run `ollama` on laptop - might have to move to Linux machine for this - this will make the chat functionality a lot better
-- [ ] Finalize `examples/example_index` to get some basic questions answered
-	- [ ] See if the time stamps are ruining the document look up -> but there's got to be solutions to this to, but this would be cool for future Whisper integration, and for future video replay consideration
+- [x] Use the previous steps to complete the initial push for VectorIndexStore over the current collection of Documents
+	- [x] Save it locally, look into maybe using FAISS for storage persistence as it seems to accelerate/reduce the space a little
+- [x] Think about using figuring out how to run `ollama` on laptop - might have to move to Linux machine for this - this will make the chat functionality a lot better
+- [x] Finalize `examples/example_index.py` to get some basic questions answered
+	- [x] See if the time stamps are ruining the document look up -> but there's got to be solutions to this to, but this would be cool for future Whisper integration, and for future video replay consideration
 #### October 27, 2023
 * Went down a rabbit hole trying to untangle what `ServiceContext` is. I'm still confused about some of the details but at least I'm starting to understand the various components that going into it.
-* Updating the 
+* Updated the `examples/example_index.py` it now handles the Vector Store Index using the `sentence-transformers/all-MiniLM-L6-v2` model for embedding
+* Downloaded, installed, and ran [Ollama](https://github.com/jmorganca/ollama) on my laptop. It was good for a few interactions but ran out after a short back and forth due to RAM limitations.
+	* Recreate on Linux machine that has adequate amounts of memory to run this for longer. At least for the 7B model, will be curious to see if I can use it for both the embed model, as well as, the chat model
+* Found this example for integrating and using Ollama as part of the `llama_index` pipeline
+* I think containerization might not be the appropriate method to move forward with this, but llama_index also has quite a bit of literature on the deployment of these types of applications
+##### To-Do:
+- [ ] Think about how to systematize what you have so far, look into "common integration" points
+	- [ ] Talk to infra expert about what how to best organize this as an application that can be deployed to AWS or something similar
+- [ ] Get working chat functionality going with Ollama and the Vector Store Index
