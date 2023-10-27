@@ -77,11 +77,14 @@ data/
 	* As a result of the above point I'm now looking into how/if it's possible to run say LLAMA 2 locally on a MacBookPro at least for the embedding and inference as there due seem to be a few different options
 	* [Running Llama 2 on CPU Inference Locally for Document Q&A](https://towardsdatascience.com/running-llama-2-on-cpu-inference-for-document-q-a-3d636037a3d8) - Clearly explained guide for running quantized open-source LLM applications on CPUs using Llama 2, C Transformers, GGML, and LangChain
 ##### To-Do
-- [ ] Install HuggingFace
-- [ ] Download [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
-- [ ] Follow the [Custom LLM Usage Guide](https://gpt-index.readthedocs.io/en/latest/module_guides/models/llms/usage_custom.html) to use each of the models above in an vector store embedding setting
+- [x] Install HuggingFace
+- [x] Download [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
+- [x] Follow the [Custom LLM Usage Guide](https://gpt-index.readthedocs.io/en/latest/module_guides/models/llms/usage_custom.html) to use each of the models above in an vector store embedding setting
 - [ ] Use the previous steps to complete the initial push for VectorIndexStore over the current collection of Documents
 	- [ ] Save it locally, look into maybe using FAISS for storage persistence as it seems to accelerate/reduce the space a little
 - [ ] Think about using figuring out how to run `ollama` on laptop - might have to move to Linux machine for this - this will make the chat functionality a lot better
 - [ ] Finalize `examples/example_index` to get some basic questions answered
 	- [ ] See if the time stamps are ruining the document look up -> but there's got to be solutions to this to, but this would be cool for future Whisper integration, and for future video replay consideration
+#### October 27, 2023
+* Went down a rabbit hole trying to untangle what `ServiceContext` is. I'm still confused about some of the details but at least I'm starting to understand the various components that going into it.
+* Updating the 
