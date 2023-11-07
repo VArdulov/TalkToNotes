@@ -1,3 +1,5 @@
 llama_index == 0.8.48
-transformer == 4.34.1
+transformers == 4.34.1
 torch == 2.1.0
+accelerate == 0.24.1
+pypdf == 3.17.0
