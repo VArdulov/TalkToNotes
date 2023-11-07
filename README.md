@@ -96,3 +96,12 @@ data/
 - [ ] Think about how to systematize what you have so far, look into "common integration" points
 	- [ ] Talk to infra expert about what how to best organize this as an application that can be deployed to AWS or something similar
 - [ ] Get working chat functionality going with Ollama and the Vector Store Index
+#### November 1, 2023
+* Took a short break to learn a little bit more about using the `diffusers` library for "inpainting" on photographs, back to trying to develop this idea now though
+- [ ] Rerun example index locally on linux machine
+- [ ] Get access to `llama2` models on HuggingFace
+	- This required getting "permission" from Meta by submitting personally identifiable information via a web form... What a peculiar interface for trying to track this information.
+	- Then I had to go to HuggingFace's Hub for Meta, where I had to give HuggingFace permission to confirm, via the personally identified information that I was allowed to use the Meta models... Again, the polite word is, "*peculiar*"
+- I was primarily thinking about using the LLAMA v2 [7B-Chat model](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf) for the purposes of the interactive language modeling and dialogue management, but I'm going back and forth between running the general [7B-model](https://huggingface.co/meta-llama/Llama-2-7b-hf) for creating the Vector Store. 
+	- I am of the opinion that the Vector Store powered by LLAMA v2 will be "better" but I guess this should be something I experiment with at a later point once the proof of concept is developed, then I think I can move forward with experimenting with other models and even maybe I think it would be a good opportunity to look into fine tuning
+- 
