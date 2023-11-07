@@ -92,7 +92,12 @@ data/
 	* Recreate on Linux machine that has adequate amounts of memory to run this for longer. At least for the 7B model, will be curious to see if I can use it for both the embed model, as well as, the chat model
 * Found this example for integrating and using Ollama as part of the `llama_index` pipeline
 * I think containerization might not be the appropriate method to move forward with this, but llama_index also has quite a bit of literature on the deployment of these types of applications
+* While Ollama does seem to be a solution, I am also looking to see if I can just access/interface directly with LLAMA2, since I would like to use it as an `embed_model` in the future as well to build the Vector Store in the first place too
+#### October 28, 2023
+
 ##### To-Do:
 - [ ] Think about how to systematize what you have so far, look into "common integration" points
 	- [ ] Talk to infra expert about what how to best organize this as an application that can be deployed to AWS or something similar
 - [ ] Get working chat functionality going with Ollama and the Vector Store Index
+- [ ] Try to run `llama2` without Ollama
+-  LLama2 needs time for usage approval
