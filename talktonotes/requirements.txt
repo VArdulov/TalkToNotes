@@ -3,3 +3,4 @@ transformers == 4.34.1
 torch == 2.1.0
 accelerate == 0.24.1
 pypdf == 3.17.0
+llama-cpp-python == 0.2.14
